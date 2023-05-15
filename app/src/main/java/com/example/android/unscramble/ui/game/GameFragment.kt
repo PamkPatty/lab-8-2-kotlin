@@ -108,12 +108,6 @@ class GameFragment : Fragment() {
     }
 
 
-    private fun getNextScrambledWord(): String {
-        val tempWord = allWordsList.random().toCharArray()
-        tempWord.shuffle()
-        return String(tempWord)
-    }
-
     /*
 * Creates and shows an AlertDialog with the final score.
 */
@@ -141,11 +135,6 @@ class GameFragment : Fragment() {
 
     private fun exitGame() {
         activity?.finish()
-    }
-
-    override fun onDetach() {
-        super.onDetach()
-        Log.d("GameFragment", "GameFragment destroyed!")
     }
 
 
