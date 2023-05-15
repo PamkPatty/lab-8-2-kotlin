@@ -78,12 +78,6 @@ class GameFragment : Fragment() {
         // Update the UI
         updateNextWordOnScreen()
 
-// Observe the scrambledCharArray LiveData, passing in the LifecycleOwner and the observer.
-        viewModel.currentScrambledWord.observe(viewLifecycleOwner
-        ) { newWord ->
-            binding.textViewUnscrambledWord.text = newWord
-        }
-
         viewModel.score.observe(
             viewLifecycleOwner,
         ) { newScore ->
